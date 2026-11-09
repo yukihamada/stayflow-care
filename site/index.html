@@ -1,0 +1,1027 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<script>document.documentElement.className+=' js';</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StayFlow Care — 民泊清掃と家事代行を、信頼できる人とつなぐ</title>
+<meta name="description" content="民泊オーナーの清掃・ゲスト対応と、家事代行で働きたい人をつなぐマッチング。品質チェックリストと定着サポートで、安心して任せられる関係をつくります。先行登録受付中。">
+<meta property="og:title" content="StayFlow Care — 民泊清掃と家事代行を、信頼できる人とつなぐ">
+<meta property="og:description" content="民泊オーナーの清掃・ゲスト対応と、家事代行で働きたい人をつなぐマッチング。品質チェックリストと定着サポートで、安心して任せられる関係をつくります。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="StayFlow Care">
+<meta property="og:url" content="https://care.stayflowapp.com/">
+<meta property="og:image" content="https://care.stayflowapp.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://care.stayflowapp.com/og.png">
+<link rel="canonical" href="https://care.stayflowapp.com/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0e7490">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "StayFlow Care",
+  "serviceType": "民泊清掃・家事代行のマッチング",
+  "description": "民泊オーナーの清掃・ゲスト対応と、家事代行で働きたい人をつなぐマッチングサービス。品質チェックリストと定着サポート。",
+  "provider": {
+    "@type": "Organization",
+    "name": "Enabler Inc.",
+    "email": "info@enablerdao.com"
+  },
+  "areaServed": "JP"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"登録すると、すぐに仕事（またはスタッフ）が決まりますか？","acceptedAnswer":{"@type":"Answer","text":"いいえ、登録は「希望のご登録」です。条件が合う相手が見つかった段階で、こちらからご連絡します。登録しただけで費用が発生したり、無理に契約を進めたりすることはありません。"}},
+    {"@type":"Question","name":"料金はいつ、いくらかかりますか？","acceptedAnswer":{"@type":"Answer","text":"先行登録は無料です。正式な料金は、物件・作業内容・稼働条件が決まった段階で、契約前に書面でご案内します。金額に納得いただけない場合はお断りいただけます。"}},
+    {"@type":"Question","name":"民泊以外の家事代行もお願いできますか？","acceptedAnswer":{"@type":"Answer","text":"はい。民泊の清掃を中心に、日常の家事代行のご相談も受け付けています。ご希望の内容を登録時にお知らせください。"}},
+    {"@type":"Question","name":"働き手として登録するのに、資格や経験は必要ですか？","acceptedAnswer":{"@type":"Answer","text":"必須の資格はありません。未経験の方もご登録いただけます。作業の基準はチェックリストでお伝えするので、安心して始められます。"}},
+    {"@type":"Question","name":"個人情報はどのように扱われますか？","acceptedAnswer":{"@type":"Answer","text":"ご登録いただいた情報は、マッチングのご連絡およびサービスに関するご案内にのみ利用します。ご本人の同意なく第三者へ販売・提供することはありません。"}},
+    {"@type":"Question","name":"サービスはいつ始まりますか？","acceptedAnswer":{"@type":"Answer","text":"現在は先行登録を受け付けている段階です。準備が整い次第、ご登録いただいた方から順にご案内します。開始時期は登録者へ優先的にお知らせします。"}}
+  ]
+}
+</script>
+<style>
+  :root{
+    --ink:#15242b; --ink-soft:#3d5158; --muted:#5f7178;
+    --sea:#0e7490; --sea-deep:#0b5566; --sea-ink:#083c48;
+    --sand:#fbf8f2; --sand-2:#f3ede1; --card:#ffffff;
+    --coral:#c8441f; --coral-deep:#b23a15;
+    --line:#e6ddce; --line-soft:#efe8db;
+    --ok:#0f7a5a; --ok-bg:#e6f4ee;
+    --shadow:0 1px 2px rgba(16,40,48,.05),0 8px 28px rgba(16,40,48,.07);
+    --shadow-lg:0 2px 6px rgba(16,40,48,.06),0 24px 60px rgba(16,40,48,.12);
+    --radius:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,"Segoe UI",Roboto,sans-serif;
+    color:var(--ink); background:var(--sand); line-height:1.75;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  .wrap-narrow{max-width:760px;margin:0 auto;padding:0 24px}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(251,248,242,.82); backdrop-filter:saturate(1.4) blur(12px);
+    border-bottom:1px solid var(--line-soft);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+  .logo{display:flex;align-items:center;gap:10px;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-weight:700;
+        letter-spacing:.02em;font-size:19px;color:var(--sea-ink);text-decoration:none;white-space:nowrap}
+  .logo .dot{width:11px;height:11px;border-radius:50%;background:var(--coral);display:inline-block}
+  .logo small{font-family:inherit;font-weight:700;color:var(--sea);font-size:13px;
+              letter-spacing:.08em;margin-left:2px}
+  .nav-links{display:flex;align-items:center;gap:26px}
+  .nav-links a{color:var(--ink-soft);text-decoration:none;font-size:14.5px;font-weight:500;transition:color .2s;padding:12px 2px;display:inline-block}
+  .nav-links a:hover{color:var(--sea)}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    font-weight:700;font-size:15px;text-decoration:none;cursor:pointer;
+    border-radius:999px;padding:13px 26px;border:1.5px solid transparent;
+    transition:transform .16s ease, box-shadow .2s ease, background .2s ease, color .2s;
+    white-space:nowrap;
+  }
+  .btn:active{transform:translateY(1px)}
+  .btn-primary{background:var(--coral);color:#fff;box-shadow:0 6px 18px rgba(228,87,46,.28)}
+  .btn-primary:hover{background:var(--coral-deep);box-shadow:0 10px 26px rgba(228,87,46,.34)}
+  .btn-ghost{background:transparent;color:var(--sea-deep);border-color:var(--sea-deep)}
+  .btn-ghost:hover{background:var(--sea-deep);color:#fff}
+  .btn-sm{padding:10px 20px;font-size:14px}
+  .nav .btn{display:none}
+  @media(min-width:880px){ .nav .btn{display:inline-flex} .nav-links{display:flex} }
+  @media(max-width:879px){ .nav-links{display:none} .nav .btn{display:inline-flex} }
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;padding:72px 0 64px;overflow:hidden}
+  .hero::before{
+    content:"";position:absolute;inset:0;z-index:-1;
+    background:
+      radial-gradient(60% 55% at 82% 8%, rgba(14,116,144,.10), transparent 60%),
+      radial-gradient(50% 50% at 8% 90%, rgba(228,87,46,.07), transparent 60%);
+  }
+  .hero-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:center}
+  @media(min-width:960px){ .hero-grid{grid-template-columns:1.08fr .92fr;gap:56px} }
+  .kicker{
+    display:inline-flex;align-items:center;gap:8px;
+    background:#e8f4f7;color:var(--sea-deep);font-weight:700;font-size:13px;
+    padding:7px 15px;border-radius:999px;margin-bottom:22px;letter-spacing:.02em;
+  }
+  .kicker .pulse{width:7px;height:7px;border-radius:50%;background:var(--ok);
+                 box-shadow:0 0 0 0 rgba(15,122,90,.5);animation:pulse 2.2s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(15,122,90,.5)}70%{box-shadow:0 0 0 8px rgba(15,122,90,0)}100%{box-shadow:0 0 0 0 rgba(15,122,90,0)}}
+  h1{font-size:clamp(30px,5.2vw,50px);line-height:1.16;font-weight:700;letter-spacing:-.01em}
+  h1 em{font-style:normal;color:var(--sea);position:relative;white-space:nowrap}
+  h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.28em;
+               background:rgba(228,87,46,.18);z-index:-1;border-radius:3px}
+  .hero-lead{margin-top:22px;font-size:18px;color:var(--ink-soft);max-width:560px}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+  .hero-trust{display:flex;flex-wrap:wrap;gap:18px 26px;margin-top:30px;color:var(--muted);font-size:13.5px}
+  .hero-trust span{display:inline-flex;align-items:center;gap:7px}
+  .hero-trust svg{flex:none;color:var(--ok)}
+
+  /* hero visual */
+  .hero-visual{position:relative}
+  .hero-photo{border-radius:24px;overflow:hidden;box-shadow:var(--shadow-lg);
+              border:1px solid var(--line);aspect-ratio:1200/654;background:#e6eef0}
+  .hero-photo img{width:100%;height:100%;object-fit:cover;display:block}
+  .hero-float{
+    position:absolute;left:-14px;bottom:26px;display:flex;align-items:center;gap:12px;
+    background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:13px 18px 13px 14px;box-shadow:var(--shadow-lg);max-width:280px;
+  }
+  .hero-float-2{left:auto;right:-14px;bottom:auto;top:22px}
+  .float-ic{width:40px;height:40px;border-radius:12px;flex:none;display:grid;place-items:center;
+            background:#eef6f8;color:var(--sea-deep)}
+  .float-ic.coral{background:#fdeee8;color:var(--coral-deep)}
+  .float-tx b{display:block;font-size:14px;font-weight:700;color:var(--ink)}
+  .float-tx span{font-size:12px;color:var(--muted);line-height:1.5}
+  @media(max-width:520px){
+    .hero-visual{display:flex;flex-direction:column;gap:10px}
+    .hero-float{position:static;left:auto;right:auto;top:auto;bottom:auto;max-width:none;
+                box-shadow:var(--shadow);padding:11px 14px}
+    .hero-float-2{position:static;left:auto;right:auto;top:auto;bottom:auto}
+    .float-tx span{font-size:11.5px}
+  }
+
+  /* ---------- section base ---------- */
+  section{padding:76px 0}
+  .sec-head{max-width:680px;margin-bottom:44px}
+  .sec-tag{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-weight:700;font-size:12.5px;letter-spacing:.14em;
+           text-transform:uppercase;color:var(--coral-deep);margin-bottom:12px}
+  .sec-head h2{font-size:clamp(24px,3.4vw,34px);line-height:1.28;font-weight:700;letter-spacing:-.01em}
+  .sec-head p{margin-top:16px;color:var(--ink-soft);font-size:16.5px}
+  .center{text-align:center;margin-left:auto;margin-right:auto}
+
+  /* ---------- problem ---------- */
+  .problem{background:var(--sand-2)}
+  .pain-grid{display:grid;grid-template-columns:1fr;gap:16px}
+  @media(min-width:720px){ .pain-grid{grid-template-columns:repeat(3,1fr)} }
+  .problem-photo{border-radius:var(--radius);overflow:hidden;margin-bottom:24px;border:1px solid var(--line);
+                 box-shadow:var(--shadow);background:#e6eef0}
+  .problem-photo img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:1200/654;max-height:340px}
+  .pain{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+        padding:26px 24px;box-shadow:var(--shadow)}
+  .pain .q{font-size:15.5px;font-weight:700;color:var(--ink);line-height:1.6}
+  .pain .q::before{content:"“";color:var(--coral);font-size:26px;font-weight:700;margin-right:2px;vertical-align:-4px}
+  .pain p{margin-top:12px;font-size:14px;color:var(--muted)}
+
+  /* ---------- how ---------- */
+  .steps{display:grid;grid-template-columns:1fr;gap:20px;counter-reset:step}
+  @media(min-width:820px){ .steps{grid-template-columns:repeat(3,1fr)} }
+  .step{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+        padding:30px 26px;box-shadow:var(--shadow)}
+  .step .num{
+    counter-increment:step;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-weight:700;
+    width:44px;height:44px;border-radius:13px;display:grid;place-items:center;
+    background:var(--sea);color:#fff;font-size:19px;margin-bottom:18px;
+  }
+  .step .num::before{content:counter(step)}
+  .step h3{font-size:18px;font-weight:700;margin-bottom:10px;color:var(--sea-ink)}
+  .step p{font-size:14.5px;color:var(--ink-soft)}
+
+  /* ---------- two audiences ---------- */
+  .aud{background:var(--sea-ink);color:#eaf3f4;position:relative;overflow:hidden}
+  .aud::before{content:"";position:absolute;inset:0;
+    background:radial-gradient(50% 60% at 85% 10%, rgba(228,87,46,.16), transparent 60%);z-index:0}
+  .aud .wrap{position:relative;z-index:1}
+  .aud .sec-tag{color:#f6a98f}
+  .aud .sec-head h2{color:#fff}
+  .aud .sec-head p{color:#bcd2d6}
+  .aud-grid{display:grid;grid-template-columns:1fr;gap:20px}
+  @media(min-width:820px){ .aud-grid{grid-template-columns:repeat(2,1fr)} }
+  .aud-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);
+            border-radius:var(--radius);padding:32px 30px;backdrop-filter:blur(4px)}
+  .aud-photo{border-radius:14px;overflow:hidden;margin:-8px 0 22px;aspect-ratio:1200/654;background:#123}
+  .aud-photo img{width:100%;height:100%;object-fit:cover;display:block}
+  .aud-card .who{font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+                 color:#f6a98f;margin-bottom:12px}
+  .aud-card h3{font-size:21px;font-weight:700;color:#fff;margin-bottom:18px;line-height:1.4}
+  .aud-card ul{list-style:none;display:grid;gap:13px}
+  .aud-card li{display:flex;gap:12px;font-size:15px;color:#d7e6e8;line-height:1.6}
+  .aud-card li svg{flex:none;margin-top:3px;color:#7fd1b9}
+
+  /* ---------- trust / quality ---------- */
+  .trust-grid{display:grid;grid-template-columns:1fr;gap:16px}
+  @media(min-width:720px){ .trust-grid{grid-template-columns:repeat(2,1fr)} }
+  .trust-photos{display:grid;grid-template-columns:1fr;gap:16px;margin-bottom:16px}
+  @media(min-width:720px){ .trust-photos{grid-template-columns:repeat(2,1fr)} }
+  .trust-photo{margin:0;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);
+               box-shadow:var(--shadow);background:#e6eef0;position:relative}
+  .trust-photo img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:1200/654}
+  .trust-photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 18px 14px;
+               font-size:13px;font-weight:700;color:#fff;
+               background:linear-gradient(transparent,rgba(10,30,35,.72))}
+  .trust-item{display:flex;gap:16px;background:var(--card);border:1px solid var(--line);
+              border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+  .trust-item .ic{width:46px;height:46px;border-radius:13px;flex:none;display:grid;place-items:center;
+                  background:#eef6f8;color:var(--sea-deep)}
+  .trust-item h3{font-size:16.5px;font-weight:700;margin-bottom:6px}
+  .trust-item p{font-size:14px;color:var(--muted)}
+
+  /* ---------- pricing ---------- */
+  .pricing{background:var(--sand-2)}
+  .sf-link{padding:0 0 8px}
+  .sf-link-card{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;
+    background:var(--card);border:1px solid var(--line);border-left:4px solid var(--sea);
+    border-radius:var(--radius);padding:20px 24px;box-shadow:var(--shadow)}
+  .sf-link-tag{display:inline-block;font-size:12px;font-weight:700;color:var(--sea-deep);
+    background:#e8f4f7;border-radius:999px;padding:3px 12px;margin-bottom:8px}
+  .sf-link-tx p{font-size:14px;color:var(--ink-soft);line-height:1.75;margin:0;max-width:640px}
+  .sf-link-btn{flex:none;white-space:nowrap}
+  .ops{background:linear-gradient(180deg,var(--sand) 0%,var(--sand-2) 100%)}
+  .ops-grid{display:grid;grid-template-columns:1fr;gap:22px}
+  @media(min-width:860px){ .ops-grid{grid-template-columns:1.15fr .85fr;align-items:stretch} }
+  .ops-msg,.ops-monitor{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:30px 30px 32px;box-shadow:var(--shadow)}
+  .ops-msg h2,.ops-monitor h2{font-size:clamp(21px,2.6vw,26px);font-weight:700;line-height:1.35;
+    letter-spacing:-.01em;margin:8px 0 14px;color:var(--ink)}
+  .ops-msg p{font-size:14.5px;color:var(--ink-soft);line-height:1.85;margin-bottom:12px}
+  .ops-msg strong{color:var(--ink);font-weight:700}
+  .ops-sign{margin-top:18px;font-weight:700;color:var(--sea-ink);font-size:14px}
+  .ops-monitor p{font-size:14px;color:var(--ink-soft);line-height:1.8;margin-bottom:14px}
+  .ops-monitor .btn{margin-top:18px;width:100%;text-align:center}
+  .price-grid{display:grid;grid-template-columns:1fr;gap:20px}
+  @media(min-width:820px){ .price-grid{grid-template-columns:repeat(2,1fr);max-width:820px;margin:0 auto} }
+  .price{background:var(--card);border:1.5px solid var(--line);border-radius:22px;padding:34px 30px;
+         box-shadow:var(--shadow);display:flex;flex-direction:column}
+  .price.feature{border-color:var(--sea);box-shadow:var(--shadow-lg);position:relative}
+  .price .tag{position:absolute;top:-13px;left:30px;background:var(--sea);color:#fff;
+              font-size:11.5px;font-weight:700;padding:5px 14px;border-radius:999px}
+  .price h3{font-size:18px;font-weight:700;color:var(--sea-ink)}
+  .price .amt{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-weight:700;font-size:34px;color:var(--ink);margin:14px 0 2px;line-height:1}
+  .price .amt small{font-size:14px;font-weight:600;color:var(--muted);font-family:inherit}
+  .price .note{font-size:13px;color:var(--muted);margin-bottom:22px}
+  .price-hint{font-size:12.5px;color:var(--ink-soft);line-height:1.7;background:var(--sand);
+    border:1px dashed var(--line);border-radius:10px;padding:10px 12px;margin:-8px 0 20px}
+  .price-hint strong{color:var(--ink);font-weight:700}
+  .price-basis{font-size:11.5px;color:var(--muted);line-height:1.6;margin:-14px 0 20px}
+  .price ul{list-style:none;display:grid;gap:12px;margin-bottom:26px;flex:1}
+  .price li{display:flex;gap:10px;font-size:14.5px;color:var(--ink-soft);align-items:flex-start}
+  .price li svg{flex:none;margin-top:3px;color:var(--ok)}
+  .price .btn{width:100%}
+
+  /* ---------- faq ---------- */
+  .faq-list{max-width:800px;margin:0 auto;display:grid;gap:12px}
+  details{background:var(--card);border:1px solid var(--line);border-radius:14px;
+          padding:0 22px;box-shadow:var(--shadow);overflow:hidden}
+  details[open]{border-color:var(--sea)}
+  summary{list-style:none;cursor:pointer;padding:20px 0;font-weight:700;font-size:15.5px;
+          display:flex;justify-content:space-between;align-items:center;gap:16px;color:var(--ink)}
+  summary::-webkit-details-marker{display:none}
+  summary .plus{flex:none;width:22px;height:22px;position:relative;transition:transform .25s}
+  summary .plus::before,summary .plus::after{content:"";position:absolute;background:var(--sea);
+          border-radius:2px;transition:transform .25s}
+  summary .plus::before{top:50%;left:0;right:0;height:2px;transform:translateY(-50%)}
+  summary .plus::after{left:50%;top:0;bottom:0;width:2px;transform:translateX(-50%)}
+  details[open] summary .plus::after{transform:translateX(-50%) scaleY(0)}
+  details .ans{padding:0 0 22px;font-size:14.5px;color:var(--ink-soft);line-height:1.8}
+
+  /* ---------- form ---------- */
+  .signup{background:linear-gradient(180deg,var(--sand) 0%, #f0f7f8 100%)}
+  .form-card{max-width:640px;margin:0 auto;background:var(--card);border:1px solid var(--line);
+             border-radius:24px;box-shadow:var(--shadow-lg);padding:40px 34px}
+  @media(max-width:520px){ .form-card{padding:30px 22px} }
+  .form-card h2{font-size:24px;font-weight:700;text-align:center;color:var(--sea-ink)}
+  .form-card .lead{text-align:center;color:var(--muted);font-size:14.5px;margin:10px 0 26px}
+  .seg{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:22px}
+  .seg label{position:relative;cursor:pointer}
+  .seg input{position:absolute;opacity:0;inset:0;cursor:pointer}
+  .seg .box{border:1.5px solid var(--line);border-radius:13px;padding:16px;text-align:center;
+            font-weight:700;font-size:14.5px;color:var(--ink-soft);transition:.2s;background:var(--sand)}
+  .seg .box small{display:block;font-weight:500;font-size:12px;color:var(--muted);margin-top:3px}
+  .seg input:checked + .box{border-color:var(--sea);background:#eef6f8;color:var(--sea-deep);
+            box-shadow:0 0 0 3px rgba(14,116,144,.12)}
+  .seg input:focus-visible + .box{outline:3px solid var(--sea);outline-offset:2px}
+  .field input:focus-visible,.field textarea:focus-visible,.field select:focus-visible{outline:none}
+  .consent input:focus-visible{outline:3px solid var(--sea);outline-offset:2px}
+  .btn:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--sea);outline-offset:3px;border-radius:6px}
+  .field input[aria-invalid="true"],.field textarea[aria-invalid="true"]{border-color:var(--coral-deep);background:#fdf3ef}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-size:13.5px;font-weight:700;color:var(--ink-soft);margin-bottom:7px}
+  .field .req{color:var(--coral);font-size:11px;margin-left:6px}
+  .field input,.field textarea,.field select{
+    width:100%;border:1.5px solid var(--line);border-radius:12px;padding:13px 15px;
+    font-family:inherit;font-size:15px;color:var(--ink);background:var(--sand);transition:.2s;
+  }
+  .field input:focus,.field textarea:focus,.field select:focus{
+    outline:none;border-color:var(--sea);background:#fff;box-shadow:0 0 0 3px rgba(14,116,144,.12)}
+  .field textarea{resize:vertical;min-height:96px}
+  .field-err{display:block;font-size:12.5px;font-weight:700;color:var(--coral-deep);margin-top:6px;min-height:0}
+  .field-err:empty{display:none}
+  .consent{margin:4px 0 18px}
+  .consent label{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--ink-soft);cursor:pointer;line-height:1.6;min-height:44px;padding:4px 0}
+  .consent input[type="checkbox"]{width:22px;height:22px;flex:none;margin-top:1px;accent-color:var(--sea);cursor:pointer}
+  .consent a{color:var(--sea-deep);text-decoration:underline}
+  .consent .req{color:var(--coral-deep);font-size:11px;margin-left:6px;font-weight:700}
+  .consent-link{margin-top:6px;font-size:13px;padding-left:28px}
+  .form-card .btn{width:100%;margin-top:8px;padding:15px;font-size:16px}
+  .form-note{font-size:12px;color:var(--muted);text-align:center;margin-top:16px;line-height:1.7}
+  .form-msg{display:none;margin-top:16px;padding:14px 16px;border-radius:12px;font-size:14px;text-align:center}
+  .form-msg.ok{display:block;background:var(--ok-bg);color:var(--ok);font-weight:600}
+  .form-msg.err{display:block;background:#fdeee8;color:var(--coral-deep);font-weight:600}
+
+  /* ---------- legal ---------- */
+  .legal{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+         padding:34px 30px;box-shadow:var(--shadow);font-size:14.5px;color:var(--ink-soft)}
+  .legal h3{font-size:16px;font-weight:700;color:var(--sea-ink);margin:22px 0 8px}
+  .legal h3:first-child{margin-top:0}
+  .legal p{line-height:1.85;margin-bottom:6px}
+  .legal ul{margin:6px 0 6px 1.2em;display:grid;gap:5px}
+  .legal a{color:var(--sea-deep);text-decoration:underline}
+  .legal-note{margin-top:22px;font-size:12.5px;color:var(--muted)}
+
+  /* ---------- conditions ---------- */
+  .conditions{margin-top:26px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+              padding:30px;box-shadow:var(--shadow)}
+  .conditions h3{font-size:19px;font-weight:700;color:var(--sea-ink);margin-bottom:10px}
+  .conditions-lead{font-size:14.5px;color:var(--ink-soft);margin-bottom:22px;line-height:1.7}
+  .cond-grid{display:grid;grid-template-columns:1fr;gap:12px}
+  @media(min-width:640px){ .cond-grid{grid-template-columns:repeat(2,1fr)} }
+  @media(min-width:960px){ .cond-grid{grid-template-columns:repeat(3,1fr)} }
+  .cond{background:var(--sand-2);border:1px solid var(--line-soft);border-radius:14px;padding:16px 18px}
+  .cond-k{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--sea-deep);margin-bottom:6px}
+  .cond-v{display:block;font-size:15px;font-weight:700;color:var(--ink);line-height:1.5}
+  .cond-note{display:block;font-size:12.5px;font-weight:500;color:var(--ink-soft);margin-top:4px}
+  .conditions-foot{margin-top:18px;font-size:12.5px;color:var(--muted)}
+  .cond-range{margin-top:16px;background:#fff;border:1px dashed var(--coral);border-radius:14px;padding:16px 18px}
+  .cond-range-k{display:inline-block;font-size:12px;font-weight:700;color:var(--coral-deep);
+                background:#fdf3ef;border-radius:999px;padding:3px 12px;margin-bottom:8px}
+  .cond-range p{font-size:14px;color:var(--ink-soft);line-height:1.75;margin:0}
+  .cond-range strong{color:var(--ink);font-weight:700}
+
+  /* ---------- proof ---------- */
+  .proof-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:16px}
+  @media(min-width:720px){ .proof-grid{grid-template-columns:repeat(2,1fr)} }
+  .proof-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+              padding:26px;box-shadow:var(--shadow)}
+  .proof-card h3{font-size:17px;font-weight:700;color:var(--sea-ink);margin-bottom:8px}
+  .proof-sub{font-size:13.5px;color:var(--muted);margin-bottom:16px;line-height:1.6}
+  .check-list{list-style:none;display:grid;gap:11px}
+  .check-list li{display:flex;gap:11px;font-size:14px;color:var(--ink-soft);line-height:1.55}
+  .check-list .ck{flex:none;width:20px;height:20px;border-radius:6px;margin-top:1px;
+                  background:#e3f4ee;position:relative}
+  .check-list .ck::after{content:"";position:absolute;left:6px;top:3px;width:6px;height:10px;
+                  border:solid var(--ok);border-width:0 2px 2px 0;transform:rotate(45deg)}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--sea-ink);color:#a9c3c8;padding:52px 0 40px;font-size:13.5px}
+  .foot-grid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:30px;align-items:flex-start}
+  .foot-brand .logo{color:#fff;font-size:18px}
+  .foot-brand .logo small{color:#9fc4cb}
+  .foot-brand p{margin-top:12px;max-width:340px;color:#8fb0b6;line-height:1.7}
+  .foot-links{display:flex;flex-wrap:wrap;gap:26px}
+  .foot-links a{color:#d3e3e6;text-decoration:none;font-size:13.5px;padding:13px 0;display:inline-block}
+  .foot-links a:hover{color:#fff}
+  .foot-bottom{margin-top:36px;padding-top:22px;border-top:1px solid rgba(255,255,255,.1);
+               display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;color:#9fbcc1;font-size:12.5px}
+
+  /* reveal (only when JS is available; no-JS keeps content visible) */
+  html.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease, transform .7s ease}
+  html.js .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    html.js .reveal{opacity:1;transform:none;transition:none}
+    .kicker .pulse{animation:none}
+  }
+  .skip{position:absolute;left:-999px;top:0;background:var(--sea);color:#fff;padding:10px 16px;border-radius:0 0 8px 0;z-index:100}
+  .skip:focus{left:0}
+</style>
+</head>
+<body>
+<a href="#main" class="skip">本文へスキップ</a>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="logo">
+      <span class="dot" aria-hidden="true"></span>StayFlow<small>CARE</small>
+    </a>
+    <nav class="nav-links" aria-label="メインナビゲーション">
+      <a href="#problem">課題</a>
+      <a href="#how">仕組み</a>
+      <a href="#for-workers">働きたい方</a>
+      <a href="#pricing">料金</a>
+      <a href="#faq">よくある質問</a>
+    </nav>
+    <a href="#signup" class="btn btn-primary btn-sm">先行登録する</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="kicker"><span class="pulse" aria-hidden="true"></span>先行登録 受付中</span>
+        <h1>民泊清掃と家事代行を、<br><em>信頼できる人</em>とつなぐ。</h1>
+        <p class="hero-lead">
+          オーナーの「清掃が回らない」「急な連絡が不安」を、
+          品質を大切にする働き手とつなぐことで解決します。
+          チェックリストと定着サポートで、安心して任せられる関係をつくります。
+        </p>
+        <div class="hero-cta">
+          <a href="#signup" class="btn btn-primary">無料で先行登録する</a>
+          <a href="#how" class="btn btn-ghost">仕組みを見る</a>
+        </div>
+        <div class="hero-trust">
+          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>登録は1分・無料</span>
+          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>オーナー・働き手 両対応</span>
+          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>しつこい営業なし</span>
+        </div>
+      </div>
+
+      <aside class="hero-visual" aria-label="サービスのイメージ">
+        <div class="hero-photo">
+          <img src="img/hero-room.webp" srcset="img/hero-room-640.webp 640w, img/hero-room-960.webp 960w, img/hero-room.webp 1200w" sizes="(max-width:640px) 92vw, (max-width:1024px) 60vw, 560px" width="1200" height="654"
+               alt="清掃が行き届いた明るい民泊の寝室。白いリネンのベッドと朝の光" loading="eager" fetchpriority="high">
+        </div>
+        <div class="hero-float">
+          <span class="float-ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>
+          <div class="float-tx"><b>品質チェック付き</b><span>作業前後の写真と項目チェックで可視化</span></div>
+        </div>
+        <div class="hero-float hero-float-2">
+          <span class="float-ic coral" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></span>
+          <div class="float-tx"><b>定着を大切に</b><span>続けられる仕組みで、顔なじみの安心を</span></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- STAYFLOW LINK -->
+  <section class="sf-link">
+    <div class="wrap">
+      <div class="sf-link-card reveal">
+        <div class="sf-link-tx">
+          <span class="sf-link-tag">StayFlow をお使いの方へ</span>
+          <p>民泊管理ツール「StayFlow」で物件を管理中のオーナーは、清掃・ゲスト対応の手配まで一気通貫でご相談いただけます。物件情報を活かしたまま、現場の人手を補えます。</p>
+        </div>
+        <a href="https://stayflowapp.com/" class="btn btn-ghost sf-link-btn" rel="noopener">StayFlow 本体を見る →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="problem" id="problem">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-tag">The Problem</div>
+        <h2>「清掃が回らない」「人がすぐ辞める」<br>その悩み、ひとりで抱えていませんか。</h2>
+        <p>民泊も家事も、結局は「人」で決まります。けれど信頼できる人を探して、育てて、続けてもらうのは簡単ではありません。</p>
+      </div>
+      <div class="problem-photo reveal">
+        <img src="img/clean-detail.webp" srcset="img/clean-detail-640.webp 640w, img/clean-detail-960.webp 960w, img/clean-detail.webp 1200w" sizes="(max-width:640px) 92vw, 480px" width="1200" height="654" alt="手袋をした手でキッチンのカウンターを丁寧に拭く清掃の様子" loading="lazy">
+      </div>
+      <div class="pain-grid">
+        <div class="pain reveal">
+          <p class="q">急な欠勤や連絡が来なくて、清掃が間に合わない。</p>
+          <p>チェックイン前なのにスタッフと連絡がつかない。予備の手配もままならず、評価が下がるのが怖い。</p>
+        </div>
+        <div class="pain reveal">
+          <p class="q">仕上がりにムラがあって、毎回確認するのが負担。</p>
+          <p>同じ人でも日によって仕上がりが違う。写真も基準もなく、結局オーナーが最後に全部見ている。</p>
+        </div>
+        <div class="pain reveal">
+          <p class="q">募集しても、すぐ辞めてしまってまた振り出し。</p>
+          <p>やっと覚えてもらっても数か月で離脱。採用と教育のコストばかりが積み上がっていく。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW -->
+  <section id="how">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-tag">How it works</div>
+        <h2>登録から、任せられるまで。</h2>
+        <p>むずかしい手続きはありません。まずは希望を登録してください。条件が合う相手が見つかったら、こちらからご連絡します。</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="num" aria-hidden="true"></div>
+          <h3>希望を登録する</h3>
+          <p>オーナーは物件・作業内容を、働き手は希望のエリアや稼働時間を登録。1分で完了します。</p>
+        </div>
+        <div class="step reveal">
+          <div class="num" aria-hidden="true"></div>
+          <h3>条件が合う相手とつながる</h3>
+          <p>エリア・作業・スケジュールをもとにマッチング。顔合わせの段階からサポートします。</p>
+        </div>
+        <div class="step reveal">
+          <div class="num" aria-hidden="true"></div>
+          <h3>チェックリストで安心して任せる</h3>
+          <p>作業は品質チェックリストと写真で可視化。仕上がりを確認しながら、長く続けられる関係に。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUDIENCES -->
+  <section class="aud" id="for-workers">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-tag">For both sides</div>
+        <h2>オーナーにも、働く人にも、<br>気持ちのいい関係を。</h2>
+        <p>片方だけが得をする仕組みは長続きしません。双方にとって無理のない形を大切にしています。</p>
+      </div>
+      <div class="aud-grid">
+        <div class="aud-card reveal">
+          <div class="aud-photo"><img src="img/owner-portrait.webp" srcset="img/owner-portrait-640.webp 640w, img/owner-portrait-960.webp 960w, img/owner-portrait.webp 1200w" sizes="(max-width:640px) 92vw, 420px" width="1200" height="654" alt="明るい部屋でスマートフォンから清掃スケジュールを確認する手元（イメージ）" loading="lazy"></div>
+          <div class="who">民泊オーナー・管理の方へ</div>
+          <h3>「任せられる」を取り戻す</h3>
+          <ul>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>清掃・備品補充・ゲスト対応をまとめて相談できる</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>チェックリストと写真で仕上がりを確認できる</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>急なときの相談先がある安心感</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>遠方からでも物件を任せやすい</li>
+          </ul>
+        </div>
+        <div class="aud-card reveal">
+          <div class="aud-photo"><img src="img/worker-portrait.webp" srcset="img/worker-portrait-640.webp 640w, img/worker-portrait-960.webp 960w, img/worker-portrait.webp 1200w" sizes="(max-width:640px) 92vw, 420px" width="1200" height="654" alt="手袋をした手で白いタオルを丁寧に整える清掃作業の様子（イメージ）" loading="lazy"></div>
+          <div class="who">家事代行・清掃で働きたい方へ</div>
+          <h3>「続けられる」働き方を</h3>
+          <ul>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>得意な作業と希望の時間で働ける</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>作業の基準が明確で、評価に納得できる</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>顔なじみのオーナーと長く付き合える</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>困ったときに相談できる窓口がある</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="conditions reveal">
+        <h3>働く条件について（正直にお伝えします）</h3>
+        <p class="conditions-lead">報酬や雇用形態は、提携先・地域・案件によって異なります。現時点で決まっていること・これから確定することを分けて記載します。確定した条件は、登録いただいた方へ最初にご案内します。</p>
+        <div class="cond-grid">
+          <div class="cond">
+            <span class="cond-k">報酬</span>
+            <span class="cond-v">案件ごとに提示<span class="cond-note">確定後に登録者へ先行案内</span></span>
+          </div>
+          <div class="cond">
+            <span class="cond-k">雇用形態</span>
+            <span class="cond-v">業務委託を想定<span class="cond-note">提携先により雇用の可能性あり</span></span>
+          </div>
+          <div class="cond">
+            <span class="cond-k">保険・労災</span>
+            <span class="cond-v">提携先の条件に準ずる<span class="cond-note">詳細は面談時に明示</span></span>
+          </div>
+          <div class="cond">
+            <span class="cond-k">支払い</span>
+            <span class="cond-v">案件完了後、所定のサイクルで<span class="cond-note">サイクルは契約時に確定</span></span>
+          </div>
+          <div class="cond">
+            <span class="cond-k">評価の付け方</span>
+            <span class="cond-v">チェックリストの達成度で可視化<span class="cond-note">主観ではなく項目で評価</span></span>
+          </div>
+          <div class="cond">
+            <span class="cond-k">研修</span>
+            <span class="cond-v">開始前のオリエンテーションを用意<span class="cond-note">未経験の方も相談可</span></span>
+          </div>
+        </div>
+        <p class="conditions-foot">※ 職業紹介に該当する場合は、必要な許可を得たうえで運営します。詳細は面談時にご説明します。</p>
+        <div class="cond-range">
+          <span class="cond-range-k">報酬の目安（暫定・確定前）</span>
+          <p>民泊清掃は1件あたり<strong>数千円〜1万円前後</strong>、家事代行は<strong>時間単価1,500〜2,500円前後</strong>を想定しています。これは現時点の<strong>目安</strong>であり、提携先・地域・案件・稼働内容により変わります。正式な条件は確定後に登録者へ最初にご案内します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-tag">Why StayFlow Care</div>
+        <h2>「つなぐだけ」で終わらせない。</h2>
+        <p>マッチングのその先、安心して続けられる仕組みにこだわっています。</p>
+      </div>
+      <div class="trust-photos reveal">
+        <figure class="trust-photo">
+          <img src="img/tidy-room.webp" srcset="img/tidy-room-640.webp 640w, img/tidy-room-960.webp 960w, img/tidy-room.webp 1200w" sizes="(max-width:640px) 92vw, 480px" width="1200" height="654" alt="清掃後に整った明るいワンルーム。ベッドメイクと備品の配置が整っている" loading="lazy">
+          <figcaption>清掃後、写真で仕上がりを共有</figcaption>
+        </figure>
+        <figure class="trust-photo">
+          <img src="img/checklist.webp" srcset="img/checklist-640.webp 640w, img/checklist-960.webp 960w, img/checklist.webp 1200w" sizes="(max-width:640px) 92vw, 480px" width="1200" height="654" alt="チェックリストと清潔なタオル、スプレーが並ぶ作業の様子" loading="lazy">
+          <figcaption>項目チェックでムラを防ぐ</figcaption>
+        </figure>
+      </div>
+      <div class="trust-grid">
+        <div class="trust-item reveal">
+          <span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>
+          <div><h3>品質チェックリスト</h3><p>作業項目を明確にし、写真で記録。仕上がりのムラと確認の負担を減らします。</p></div>
+        </div>
+        <div class="trust-item reveal">
+          <span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></span>
+          <div><h3>定着を大切に</h3><p>働き手が無理なく続けられる条件づくりを重視。結果として、オーナーの安心につながります。</p></div>
+        </div>
+        <div class="trust-item reveal">
+          <span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+          <div><h3>誠実な運営</h3><p>誇大な表現や無理な勧誘はしません。制度・料金・条件は事前にわかりやすくお伝えします。</p></div>
+        </div>
+        <div class="trust-item reveal">
+          <span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+          <div><h3>急なときの窓口</h3><p>困ったときに相談できる窓口を用意。ひとりで抱え込まない関係を目指します。</p></div>
+        </div>
+      </div>
+
+      <div class="proof-grid reveal">
+        <div class="proof-card">
+          <h3>チェックリストの実例</h3>
+          <p class="proof-sub">実際に使う項目の一部です。写真記録とあわせて仕上がりを確認します。</p>
+          <ul class="check-list">
+            <li><span class="ck" aria-hidden="true"></span>ベッドメイク・リネン交換（シワ・髪の毛チェック）</li>
+            <li><span class="ck" aria-hidden="true"></span>水回り（浴室・洗面・トイレ）の除菌と水垢</li>
+            <li><span class="ck" aria-hidden="true"></span>キッチン・家電の拭き上げ、食器・備品の補充</li>
+            <li><span class="ck" aria-hidden="true"></span>床・家具の拭き掃除、ゴミの分別と回収</li>
+            <li><span class="ck" aria-hidden="true"></span>忘れ物チェックと最終写真の記録</li>
+          </ul>
+        </div>
+        <div class="proof-card">
+          <h3>対応エリア・体制</h3>
+          <p class="proof-sub">提供エリアは提携状況に合わせて順次拡大しています。登録時にご希望の地域をお知らせください。</p>
+          <ul class="check-list">
+            <li><span class="ck" aria-hidden="true"></span>対応エリア：東京都・大阪府を中心に準備中</li>
+            <li><span class="ck" aria-hidden="true"></span>登録後のご連絡：内容を確認のうえ順次ご案内</li>
+            <li><span class="ck" aria-hidden="true"></span>身元確認：提携先の基準に沿って実施</li>
+            <li><span class="ck" aria-hidden="true"></span>万一の際の補償：提携先の保険制度に準ずる</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPERATOR MESSAGE + MONITOR -->
+  <section class="ops">
+    <div class="wrap">
+      <div class="ops-grid">
+        <div class="ops-msg reveal">
+          <div class="sec-tag">運営者からのメッセージ</div>
+          <h2>「つなぐ」前に、条件と品質を正直に。</h2>
+          <p>はじめまして。StayFlow Care を運営する株式会社イネブラの濱田です。民泊や家事の現場では、頼みたい人と働きたい人のあいだに、条件の不透明さや品質のばらつきという壁があります。私たちは、その壁を言葉だけでなく<strong>チェックリストと正直な条件提示</strong>で下げたいと考えています。</p>
+          <p>まだ始まったばかりのサービスです。実績の数字を大きく見せることはしません。代わりに、決まっていないことは決まっていないと明記し、確定した条件から順に、登録いただいた方へお伝えします。</p>
+          <p class="ops-sign">株式会社イネブラ 代表　濱田 優貴</p>
+        </div>
+        <div class="ops-monitor reveal">
+          <div class="sec-tag">先行モニター募集</div>
+          <h2>最初の利用者を募集しています。</h2>
+          <p>正式提供に先立ち、条件や品質を一緒に確かめてくださるモニターを募集します。モニターの方には、確定前の条件をいち早くご案内します。</p>
+          <ul class="check-list">
+            <li><span class="ck" aria-hidden="true"></span>募集枠：オーナー・働き手 各10名程度（先着・予定）</li>
+            <li><span class="ck" aria-hidden="true"></span>対象：民泊オーナー・管理会社／家事代行・清掃で働きたい方</li>
+            <li><span class="ck" aria-hidden="true"></span>エリア：東京都・大阪府を中心に順次ご案内</li>
+            <li><span class="ck" aria-hidden="true"></span>モニター特典：確定前の条件を先行案内・開始時の優先枠</li>
+            <li><span class="ck" aria-hidden="true"></span>品質保証：作業はチェックリストと写真で記録し、不備は再対応の対象</li>
+            <li><span class="ck" aria-hidden="true"></span>登録・相談は無料、勧誘はしません</li>
+          </ul>
+          <a href="#signup" class="btn btn-primary">モニターに登録する</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing" id="pricing">
+    <div class="wrap">
+      <div class="sec-head center reveal" style="text-align:center">
+        <div class="sec-tag">Pricing</div>
+        <h2>わかりやすい料金。</h2>
+        <p>先行登録は無料です。正式な料金は、条件が合った段階で事前にご案内します。</p>
+      </div>
+      <div class="price-grid">
+        <div class="price reveal">
+          <h3>民泊オーナー・管理の方</h3>
+          <div class="amt">¥0<small> / 先行登録</small></div>
+          <p class="note">正式な料金は物件・作業内容に応じてご案内</p>
+          <p class="price-hint">手数料の目安（暫定・確定前）：清掃1件あたり<strong>数百円〜1,000円程度</strong>、または月額<strong>数千円〜</strong>を想定。物件数・稼働量で変わります。</p>
+          <p class="price-basis">※ 上記は現時点の暫定値です。正式な料金と確定時期は、モニター開始時に書面で提示します。</p>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>清掃・ゲスト対応の相談</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>条件が合う働き手のご紹介</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>品質チェックリストの提供</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>事前の料金案内</li>
+          </ul>
+          <a href="#signup" class="btn btn-ghost" data-aud="owner">オーナーとして登録</a>
+        </div>
+        <div class="price feature reveal">
+          <span class="tag">働きたい方</span>
+          <h3>家事代行・清掃で働く方</h3>
+          <div class="amt">¥0<small> / 登録無料</small></div>
+          <p class="note">仕事の紹介・登録に費用はかかりません</p>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>希望エリア・時間でお仕事のご紹介</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>作業の基準が明確</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>顔なじみのオーナーと長く働ける</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>相談できる窓口</li>
+          </ul>
+          <a href="#signup" class="btn btn-primary" data-aud="worker">働き手として登録</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head center reveal" style="text-align:center">
+        <div class="sec-tag">FAQ</div>
+        <h2>よくある質問</h2>
+      </div>
+      <div class="faq-list">
+        <details class="reveal">
+          <summary>登録すると、すぐに仕事（またはスタッフ）が決まりますか？<span class="plus" aria-hidden="true"></span></summary>
+          <div class="ans">いいえ、登録は「希望のご登録」です。条件が合う相手が見つかった段階で、こちらからご連絡します。登録しただけで費用が発生したり、無理に契約を進めたりすることはありません。</div>
+        </details>
+        <details class="reveal">
+          <summary>料金はいつ、いくらかかりますか？<span class="plus" aria-hidden="true"></span></summary>
+          <div class="ans">先行登録は無料です。正式な料金は、物件・作業内容・稼働条件が決まった段階で、契約前に書面でご案内します。金額に納得いただけない場合はお断りいただけます。</div>
+        </details>
+        <details class="reveal">
+          <summary>民泊以外の家事代行もお願いできますか？<span class="plus" aria-hidden="true"></span></summary>
+          <div class="ans">はい。民泊の清掃を中心に、日常の家事代行のご相談も受け付けています。ご希望の内容を登録時にお知らせください。</div>
+        </details>
+        <details class="reveal">
+          <summary>働き手として登録するのに、資格や経験は必要ですか？<span class="plus" aria-hidden="true"></span></summary>
+          <div class="ans">必須の資格はありません。未経験の方もご登録いただけます。作業の基準はチェックリストでお伝えするので、安心して始められます。</div>
+        </details>
+        <details class="reveal">
+          <summary>個人情報はどのように扱われますか？<span class="plus" aria-hidden="true"></span></summary>
+          <div class="ans">ご登録いただいた情報は、マッチングのご連絡およびサービスに関するご案内にのみ利用します。ご本人の同意なく第三者へ販売・提供することはありません。</div>
+        </details>
+        <details class="reveal">
+          <summary>サービスはいつ始まりますか？<span class="plus" aria-hidden="true"></span></summary>
+          <div class="ans">現在は先行登録を受け付けている段階です。準備が整い次第、ご登録いただいた方から順にご案内します。開始時期は登録者へ優先的にお知らせします。</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNUP -->
+  <section class="signup" id="signup">
+    <div class="wrap">
+      <div class="form-card reveal">
+        <h2>先行登録</h2>
+        <p class="lead">1分で完了します。登録は無料、しつこい営業はしません。</p>
+        <noscript>
+          <p class="form-msg err" style="margin-bottom:16px">このフォームの送信にはJavaScriptが必要です。お手数ですが <a href="mailto:info@enablerdao.com?subject=%E3%80%90StayFlow%20Care%E3%80%91%E5%85%88%E8%A1%8C%E7%99%BB%E9%8C%B2&body=%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0A%E3%83%A1%E3%83%BC%E3%83%AB%EF%BC%9A%0A%E3%82%A8%E3%83%AA%E3%82%A2%EF%BC%9A%0A%E3%81%94%E5%B8%8C%E6%9C%9B%EF%BC%9A">メールでご登録</a> ください。</p>
+        </noscript>
+        <form id="signupForm" novalidate>
+          <div class="seg" role="radiogroup" aria-label="登録の種類">
+            <label>
+              <input type="radio" name="role" value="owner" checked>
+              <span class="box">民泊オーナー<small>清掃・対応を頼みたい</small></span>
+            </label>
+            <label>
+              <input type="radio" name="role" value="worker">
+              <span class="box">働きたい方<small>家事・清掃で働きたい</small></span>
+            </label>
+          </div>
+          <div class="field">
+            <label for="name">お名前<span class="req">必須</span></label>
+            <input type="text" id="name" name="name" autocomplete="name" required placeholder="例：山田 花子" aria-describedby="name-err">
+            <span class="field-err" id="name-err" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="email">メールアドレス<span class="req">必須</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" required placeholder="例：you@example.com" aria-describedby="email-err">
+            <span class="field-err" id="email-err" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="area">エリア（任意）</label>
+            <input type="text" id="area" name="area" placeholder="例：東京都 渋谷区 / 大阪市">
+          </div>
+          <div class="field">
+            <label for="phone">電話番号（任意）</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="例：090-1234-5678">
+          </div>
+          <div class="field" id="scaleField">
+            <label for="scale">物件数・稼働規模（任意）</label>
+            <select id="scale" name="scale">
+              <option value="">選択してください</option>
+              <option value="1棟">1棟</option>
+              <option value="2〜5棟">2〜5棟</option>
+              <option value="6棟以上">6棟以上</option>
+              <option value="これから始める">これから始める</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">ご希望・ご質問（任意）</label>
+            <textarea id="message" name="message" placeholder="物件数、作業内容、稼働できる曜日・時間など、わかる範囲でご記入ください。"></textarea>
+          </div>
+          <div class="consent">
+            <label for="agree">
+              <input type="checkbox" id="agree" name="agree">
+              <span>プライバシーポリシーに同意します<span class="req">必須</span></span>
+            </label>
+            <p class="consent-link"><a href="#privacy">プライバシーポリシーを読む</a></p>
+          </div>
+          <button type="submit" class="btn btn-primary" id="submitBtn">無料で先行登録する</button>
+          <div class="form-msg" id="formMsg" role="status" aria-live="polite"></div>
+          <p class="form-note">送信いただいた情報は、ご連絡およびサービス案内にのみ利用します。<br>このフォームは先行登録の受付であり、契約の成立ではありません。</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIVACY / OPERATOR -->
+  <section id="privacy" style="padding:64px 0;background:var(--sand-2)">
+    <div class="wrap-narrow">
+      <div class="sec-head reveal" style="margin-bottom:28px">
+        <div class="sec-tag">Privacy &amp; Operator</div>
+        <h2>プライバシーポリシー・運営者情報</h2>
+      </div>
+      <div class="legal reveal">
+        <h3>運営者</h3>
+        <p>StayFlow Care（運営：株式会社イネブラ / Enabler Inc.）<br>
+        所在地：〒102-0074 東京都千代田区九段南1丁目5番6号 りそな九段ビル5階 KSフロア<br>
+        代表：濱田優貴<br>
+        お問い合わせ：<a href="mailto:info@enablerdao.com">info@enablerdao.com</a></p>
+
+        <h3>個人情報の利用目的</h3>
+        <p>ご登録いただいたお名前・メールアドレス・エリア・ご希望内容は、次の目的にのみ利用します。</p>
+        <ul>
+          <li>マッチングのご連絡およびサービスに関するご案内</li>
+          <li>お問い合わせへの回答</li>
+          <li>サービス改善のための統計的な分析（個人を特定しない形）</li>
+        </ul>
+
+        <h3>第三者提供・委託</h3>
+        <p>ご本人の同意なく、個人情報を第三者へ販売・提供することはありません。フォームの受付・管理のため、外部の問い合わせ管理システム（labs-enabler）に情報を保管する場合があります。この場合も、上記の利用目的の範囲内でのみ取り扱います。</p>
+
+        <h3>安全管理</h3>
+        <p>個人情報への不正アクセス・紛失・改ざん等を防ぐため、必要かつ適切な安全管理措置を講じます。</p>
+
+        <h3>開示・訂正・削除</h3>
+        <p>ご自身の個人情報の開示・訂正・削除をご希望の場合は、上記お問い合わせ先までご連絡ください。ご本人であることを確認のうえ、法令に従い対応します。</p>
+        <p class="legal-note">本ポリシーの全文は <a href="/#privacy">プライバシーポリシー</a> をご覧ください。利用規約は <a href="/terms">こちら</a>。</p>
+
+        <h3>改定</h3>
+        <p>本ポリシーは、必要に応じて予告なく改定することがあります。重要な変更がある場合は本ページでお知らせします。</p>
+
+        <p class="legal-note">制定日：2026年11月8日</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#" class="logo"><span class="dot" aria-hidden="true"></span>StayFlow<small>CARE</small></a>
+        <p>民泊清掃と家事代行を、信頼できる人とつなぐ。品質と定着を大切にするマッチングサービスです。</p>
+      </div>
+      <nav class="foot-links" aria-label="フッターナビゲーション">
+        <a href="#how">仕組み</a>
+        <a href="#pricing">料金</a>
+        <a href="#faq">よくある質問</a>
+        <a href="#signup">先行登録</a>
+        <a href="#privacy">プライバシーポリシー</a>
+        <a href="/terms">利用規約</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> StayFlow Care</span>
+      <span>掲載内容は先行登録のご案内であり、契約条件は個別にご案内します。</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // reveal on scroll
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){ els.forEach(function(el){el.classList.add('in')}); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){ io.observe(el); });
+    setTimeout(function(){
+      els.forEach(function(el){
+        if(!el.classList.contains('in')){
+          var r = el.getBoundingClientRect();
+          if(r.top < window.innerHeight && r.bottom > 0){ el.classList.add('in'); io.unobserve(el); }
+        }
+      });
+    }, 1200);
+  })();
+
+  // pricing CTA preselect role
+  document.querySelectorAll('[data-aud]').forEach(function(a){
+    a.addEventListener('click', function(){
+      var role = a.getAttribute('data-aud');
+      var radio = document.querySelector('input[name="role"][value="'+role+'"]');
+      if(radio){ radio.checked = true; radio.dispatchEvent(new Event('change',{bubbles:true})); }
+    });
+  });
+
+  // form submit -> inquiry hub
+  var HUB = '/api/inquiry';
+  var form = document.getElementById('signupForm');
+  var msg = document.getElementById('formMsg');
+  var btn = document.getElementById('submitBtn');
+  var scaleField = document.getElementById('scaleField');
+  function syncRoleFields(){
+    var r = form.querySelector('input[name="role"]:checked').value;
+    if(scaleField) scaleField.style.display = (r === 'owner') ? '' : 'none';
+    if(r !== 'owner' && form.scale) form.scale.value = '';
+  }
+  form.querySelectorAll('input[name="role"]').forEach(function(el){
+    el.addEventListener('change', syncRoleFields);
+  });
+  syncRoleFields();
+
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    if(btn.disabled) return;
+    msg.className = 'form-msg';
+    form.name.removeAttribute('aria-invalid');
+    form.email.removeAttribute('aria-invalid');
+    var name = form.name.value.trim();
+    var email = form.email.value.trim();
+    var area = form.area.value.trim();
+    var phone = form.phone ? form.phone.value.trim() : '';
+    var scale = form.scale ? form.scale.value : '';
+    var message = form.message.value.trim();
+    var role = form.querySelector('input[name="role"]:checked').value;
+    var agree = document.getElementById('agree');
+
+    clearFieldErrors();
+    if(!name){ setFieldErr(form.name,'name-err','お名前を入力してください。'); showErr('入力内容をご確認ください。'); return; }
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ setFieldErr(form.email,'email-err','メールアドレスの形式をご確認ください。'); showErr('入力内容をご確認ください。'); return; }
+    if(!agree.checked){ showErr('プライバシーポリシーへの同意が必要です。'); agree.focus(); return; }
+
+    var roleLabel = role === 'owner' ? '民泊オーナー' : '働きたい方';
+    var extra = { kind:'stayflow-care-signup', role:role, role_label:roleLabel, area:area, scale:scale, phone:phone };
+    var body = {
+      slug: 'stayflow-care',
+      name: name,
+      email: email,
+      message: '【' + roleLabel + '】' + (scale ? '物件数:'+scale+' ' : '') + (message || '（記入なし）'),
+      extra: extra,
+      utm_source: 'stayflow-care-lp'
+    };
+
+    btn.disabled = true;
+    var original = btn.textContent;
+    btn.textContent = '送信中…';
+
+    var ctrl = ('AbortController' in window) ? new AbortController() : null;
+    var timer = ctrl ? setTimeout(function(){ ctrl.abort(); }, 10000) : null;
+
+    fetch(HUB, {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify(body),
+      signal: ctrl ? ctrl.signal : undefined
+    }).then(function(res){
+      if(res.ok){ return res.json().catch(function(){return {}}); }
+      throw new Error('status '+res.status);
+    }).then(function(){
+      showOk('ご登録ありがとうございます。条件が合う相手が見つかり次第、ご連絡します。');
+      form.reset();
+      if(typeof syncRoleFields === 'function') syncRoleFields();
+    }).catch(function(err){
+      console.error(err);
+      var subject = encodeURIComponent('【StayFlow Care】先行登録（'+roleLabel+'）');
+      var bodyTxt = encodeURIComponent('お名前：'+name+'\nメール：'+email+'\nエリア：'+(area||'未記入')+'\n物件数：'+(scale||'未記入')+'\nご希望：'+(message||'未記入'));
+      var mailto = 'mailto:info@enablerdao.com?subject='+subject+'&body='+bodyTxt;
+      msg.className='form-msg err';
+      msg.innerHTML = '送信に失敗しました。お手数ですが <a href="'+mailto+'">こちらからメールでご登録</a> いただくか、時間をおいて再度お試しください。';
+    }).finally(function(){
+      if(timer) clearTimeout(timer);
+      btn.disabled = false;
+      btn.textContent = original;
+    });
+  });
+
+  function showErr(t){ msg.className='form-msg err'; msg.textContent=t; }
+  function showOk(t){ msg.className='form-msg ok'; msg.textContent=t; msg.scrollIntoView({behavior:'smooth',block:'center'}); }
+  function setFieldErr(el, id, t){
+    el.setAttribute('aria-invalid','true');
+    var s=document.getElementById(id); if(s) s.textContent=t;
+    el.focus();
+  }
+  function clearFieldErrors(){
+    ['name','email'].forEach(function(n){
+      var el=form[n]; if(el) el.removeAttribute('aria-invalid');
+      var s=document.getElementById(n+'-err'); if(s) s.textContent='';
+    });
+  }
+</script>
+</body>
+</html>
